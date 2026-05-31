@@ -1,0 +1,17 @@
+# Environment variables
+.env
+token.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
