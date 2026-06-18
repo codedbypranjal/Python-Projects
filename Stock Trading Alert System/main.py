@@ -18,8 +18,8 @@ for stock in stocks:
     soup=BeautifulSoup(response.text,'html.parser')
     price=soup.find(name="span",id="ctl00_ContentPlaceHolder1_CompanyDetail1_lblMarketPrice")
     f_price=float(price.get_text(strip=True))
-    dict = {stock: f_price}
-    current_price.append(dict)
+    stock_data = {stock: f_price}
+    current_price.append('stock_data')
 
 def bull(name,ltp,inv):
     client = Client(SID, AUTH)
