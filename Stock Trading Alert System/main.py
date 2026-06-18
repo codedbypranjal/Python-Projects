@@ -20,7 +20,21 @@ for stock in stocks:
     f_price=float(price.get_text(strip=True))
     dict = {stock: f_price}
     current_price.append(dict)
-print(current_price)
+
+def bull(name,ltp,inv):
+    client = Client(SID, AUTH)
+    message = client.messages.create(
+        body=f'The LTP of {name} is {ltp}🔼!! \n\n Your Profit per share is{ltp-inv }🔥',
+        from_="FROMPHONE",
+        to="TOPHONE"
+    )
+def bear(name,ltp,inv):
+    client = Client(SID, AUTH)
+    message = client.messages.create(
+        body=f'The LTP of {name} is {ltp}🔻 \n\n The price of the share decreased by Rs.{inv-ltp }😵 )',
+        from_="FROMPHONE",
+        to="TOPHONE"
+    )
 
 
 if current_price>528:
