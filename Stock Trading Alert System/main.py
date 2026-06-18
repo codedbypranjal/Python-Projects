@@ -24,14 +24,14 @@ for stock in stocks:
 def bull(name,ltp,inv):
     client = Client(SID, AUTH)
     message = client.messages.create(
-        body=f'The LTP of {name} is {ltp}🔼!! \n\n Your Profit per share is{ltp-inv }🔥',
+        body=f'🚀 {name} ALERT 🟢📈 \n LTP:{ltp} \n CP: {inv}\nChange: { +((ltp-inv)/inv)*100}%',
         from_="FROMPHONE",
         to="TOPHONE"
     )
 def bear(name,ltp,inv):
     client = Client(SID, AUTH)
     message = client.messages.create(
-        body=f'The LTP of {name} is {ltp}🔻 \n\n The price of the share decreased by Rs.{inv-ltp }😵 )',
+        body=f'😶‍🌫️ {name} ALERT 🔴📉 \n LTP:{ltp} \n CP: {inv}\nChange:-{((inv-ltp)/inv)*100}%',
         from_="FROMPHONE",
         to="TOPHONE"
     )
