@@ -36,22 +36,25 @@ def bear(name,ltp,inv):
         to="TOPHONE"
     )
 
+n=current_price[0]['NABIL']
+ntc=current_price[0]['NTC']
+ct=current_price[0]['CITY']
+kbl=current_price[0]['KBL']
+if n> 520:
+    bull('NABIL',n,520)
+else:
+    bear('NABIL',n,520)
 
-if current_price>528:
-    client = Client(SID, AUTH)
-    message = client.messages \
-        .create(
-        body=f'Price Increased 🔼📈!! \n\n The price of the share increased by Rs.{current_price-528 }🔥',
-        from_="FROMPHONE",
-        to="TOPHONE"
-    )
-if current_price<534:
-    client = Client(SID, AUTH)
-    message = client.messages \
-        .create(
-        body=f'Price Decreased🔻📉!! \n\n The price of the share decreased by Rs.{534-current_price }😵 )',
-        from_="FROMPHONE",
-        to='TOPHONE'
-    )
+if ntc>820:
+    bull('NTC',ntc,820)
+else:
+    bear('NTC',ntc,820)
 
-
+if kbl>220:
+    bull('KBL',kbl,220)
+else:
+    bear('KBL',kbl,220)
+if ct>415:
+    bull('CITY',ct,415)
+else:
+    bear('CITY',ct,415)
