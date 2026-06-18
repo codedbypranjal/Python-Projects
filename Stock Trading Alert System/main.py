@@ -37,9 +37,9 @@ def bear(name,ltp,inv):
     )
 
 n=current_price[0]['NABIL']
-ntc=current_price[0]['NTC']
-ct=current_price[0]['CITY']
-kbl=current_price[0]['KBL']
+ntc=current_price[1]['NTC']
+ct=current_price[2]['CITY']
+kbl=current_price[3]['KBL']
 if n> 520:
     bull('NABIL',n,520)
 else:
